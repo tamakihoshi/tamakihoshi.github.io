@@ -1,0 +1,306 @@
+/* Make sure body scrolls with the image */
+ .yuji-boku-regular {
+    font-family: "Yuji Boku", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+ html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: white;
+  }
+  
+  /* Set long background image */
+  body {
+    margin:0;
+    padding:0;
+    background-image: url(pictures/img_back.jpeg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  /* Container to position text absolutely on top */
+  #first-section{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20vh;
+  }
+  #first-section > img{
+    width: 42%;
+    align-self: flex-end;
+  }
+  #first-section > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 58%;
+    color: white;
+    padding-left: 10%;
+  }
+  #profile{
+    filter: drop-shadow(-100px -10px 150px rgba(0,0,0,1));
+  }
+  #name{
+    display: flex;
+    line-height: 1; 
+    flex-direction: row;
+    align-items: first baseline;
+    justify-content: center;
+    width: 58%;
+    color: white;
+    padding-left: 10%;
+  }
+  h1 {
+    font-size: 9rem;      
+    margin: 0;  
+    text-align: right; 
+    margin-right: 10%;  
+  }
+  h2 {
+    font-size: 7rem;      
+    margin: 0;  
+    text-align: right; 
+  }
+
+  #description{
+    display: flex;
+    width: 60vw;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #E7F59E40;
+    align-self:last baseline;
+    margin-bottom: 5%;
+    color: white;
+  }
+  
+  .scrolly-container {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .scrolly-text {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0rem;
+    background: rgba(20, 0, 0, 0.5); /*tint*/
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    position: sticky;
+    top: 0;
+  }
+  
+  .scrolly-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .sticky-parent {
+    height: 600vh;
+    width: 100vw;
+  }
+  
+  .sticky {
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-x: auto; /* <-- changed here */
+    overflow-y: hidden;
+    white-space: nowrap; /* prevent wrapping */
+    width: 100vw; /* fix width for consistent scroll area */
+    background:
+    linear-gradient(rgba(20,0, 0, 0.5),rgba(20,0, 0, 0.5)),  url(pictures/img_back.jpeg);
+    background-position: bottom;
+    background-size:cover;
+    opacity: 1;
+    transition: background-image 8s ease-in, background-image 0.8s ease-out,;
+    
+  }
+  
+  .horizontal {
+    display: flex;
+  }
+  .sticky::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+  }
+  
+  .dim {
+    display: inline-block; /* inline-block so it respects white-space nowrap */
+    min-width: 50vw;
+    height: 50vh;
+    margin-right: 20px;
+    /* optionally add margin or border to see separate blocks */
+  }
+  
+  .horizontal{
+    display: flex;
+    padding: 25vh;
+    padding-left: 0;
+  }
+
+  
+  @media (max-width: 620px) {
+    .dim{
+      display: block;
+      min-width: 100vw;
+      height: 100vh;
+    }
+  }
+   
+/* Header  */
+ .portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    background: rgba(20, 0, 0, 0.5); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .logo {
+    color:white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .social-links a {
+    margin-left: 1rem;
+    color:white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #0077b5; /* LinkedIn blue as default hover */
+  }
+
+  .social-links a:nth-child(2):hover {
+    color: #e4405f; /* Instagram pink */
+  }
+  .page-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  .page-nav > a{
+    width: 5vw;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    justify-self: flex-end;
+    color: white;
+    padding: 20px;
+
+  }
+  .page-nav > a:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+/* ARTICLES */
+#articles{
+    height: auto;
+    width: 100vw;
+    background-image: url(pictures/img_back.jpeg);
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+#article-wrapper{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+}
+.article{
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    background: rgba(20, 0, 0, 0); 
+    padding-left: 20%;
+    padding-right: 20%;
+    justify-content: space-between;
+
+}
+.article:hover{
+    background: rgba(20, 0, 0, 0.3); 
+
+}
+
+.article>img{
+    width: 35%;
+    height: 90%;
+    background-color: black;
+    border-radius: 50%;
+    align-self: center;
+}
+.article>p{
+    width: 60%;
+    height: 90%;
+    background-color: #E7F59E40;
+    border-radius: 10%;
+    align-self: center;
+}
+#topic{
+    padding: 8vw;
+    padding-bottom: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: white;
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 1rem;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+  }
+
+  .close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Articles</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Yuji+Boku&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<header class="portfolio-header">
+  <a class="logo yuji-boku-regular" href="../index.html">Tamaki Hoshi</a>
+  <nav class="page-nav">
+      <a href="articles.html"> Academic Writing </a>
+      <a href="creative.html"> Creative Writing </a>
+      <a href="journalism.html"> Cultural Journalism </div>
+      <a href="media.html"> Media Content </a>
+  </nav>
+  <nav class="social-links">
+       <a onclick="openPDFPopup('../files/hi.pdf')" target="_blank" aria-label="CV">
+          <i class="fa-solid fa-file-csv"></i>
+       </a>
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </nav>
+</header>
+<body id="articles">
+    <div id="topic">
+        <h1  class="yuji-boku-regular" >Cultural Journalism</h1>
+        <h2> This is about...</h2>
+    </div>
+    <div id="article-wrapper">
+            <div class="article" onclick="openPDFPopup('../files/hi.pdf')">
+                <img src="../pictures/profile.png" alt="Tamaki shoulder up">
+                <p></p>
+            </div>
+        <div class="article" onclick="openPDFPopup('../files/hi.pdf')">
+            <p></p>
+            <img src="../pictures/profile.png" alt="Tamaki shoulder up">
+        </div>
+        <div class="article" onclick="openPDFPopup('../files/hi.pdf')">
+            <img src="../pictures/profile.png" alt="Tamaki shoulder up">
+            <p></p>
+        </div>
+        <div class="article" onclick="openPDFPopup('../files/hi.pdf')">
+            <p></p>
+            <img src="../pictures/profile.png" alt="Tamaki shoulder up">
+        </div>
+    </div>
+
+    <!-- Modal Container -->
+    <div id="pdfModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('pdfModal').style.display='none'">&times;</span>
+        <iframe id="frame" src="yourfile.pdf" width="100%" height="500px"></iframe>
+    </div>
+    </div>
+    <script src="../script.js"></script>
+    
+</body>
+
+</html>
