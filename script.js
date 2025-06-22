@@ -39,7 +39,10 @@ function updateVisibleSections() {
 
 // Single scroll event listener calls both handlers
 window.addEventListener('scroll', () => {
-  horizontalScroll();
+  if (window.innerWidth > 620) {
+    // If not a mobile screen size, call the function
+    horizontalScroll();
+  }
   updateVisibleSections();
 });
 
