@@ -238,12 +238,17 @@
   }
 
   @media (max-width: 620px) {
+    .logo{
+      width: 15vw;
+    }
     .page-nav{
-      width: 30vw;
-      flex-direction: column;
+      width: 21vw;
+      /* flex-direction: column; */
     }
     .page-nav a{
-      width: 30vw;
+      width: 7.5vw;
+      font-size: 0.6rem;
+      padding: 15px;
     }
     .social-links a {
       margin-left: 1rem;
