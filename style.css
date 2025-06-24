@@ -155,6 +155,9 @@
     text-decoration: none;
     /* optionally add margin or border to see separate blocks */
   }
+  .dim:nth-child(n+2):nth-child(-n+4):hover{
+      box-shadow:0 0 10px 3px white;
+    }
   .bordered{
     border-width: 4px;
     border-style: solid;
@@ -257,13 +260,16 @@
       margin-left: 0.5rem;
       font-size:0.8rem;
     }
+    .sticky-parent{
+      height: 100vh;
+    }
   }
 
   #journals{
     height: auto;
     width: 100vw;
     background:
-    linear-gradient(rgba(20,0, 0, 0.1),rgba(20,0, 0, 0.1)), url(pictures/IMG_5542.jpg);
+    linear-gradient(rgba(20,0, 0, 0.5),rgba(20,0, 0, 0.5)), url(pictures/IMG_5688.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -312,7 +318,7 @@
     justify-content: center;
 }
 .article{
-    height: 65vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -320,6 +326,8 @@
     background: rgba(20, 0, 0, 0.5); 
     padding-left: 5%;
     padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     justify-content: space-between;
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
@@ -501,6 +509,9 @@
     }
     #topic h2{
       font-size: 1.5rem;
+    }
+    #hello{
+      font-size: 2rem;
     }
     .article{
       flex-direction: column;
