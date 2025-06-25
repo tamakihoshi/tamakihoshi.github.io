@@ -191,7 +191,7 @@
     justify-self: flex-start;
     text-decoration: none;
     color:white;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
     width: 30%;
   }
@@ -242,23 +242,27 @@
 
   @media (max-width: 620px) {
     .portfolio-header{
-      padding-right: 1vw;
+      padding-right: 2vw;
     }
     .logo{
       width: 10vw;
-      font-size: 1em;
+      font-size: 2em;
+      text-align: center;
     }
     .page-nav{
       width: 21vw;
     }
     .page-nav a{
-      width: 7.5vw;
-      font-size: 0.6rem;
+      width: 20vw;
+      font-size: 0.9rem;
+      text-align: center;
       padding: 15px;
+      margin-right: 10px;
+      margin-left: 10px;
+      background-color: rgba(22,0, 0, 0.5);
     }
-    .social-links a, i {
-      margin-left: 0.5rem;
-      font-size:0.8rem;
+    .social-links> a> i {
+      display: none;
     }
     .sticky-parent{
       height: 100vh;
@@ -361,6 +365,7 @@
 }
 .article-title >h3{
   font-size: 1.5rem;
+  text-align: center;
 }
 .article-title > a{
   font-size: 1.2rem;
@@ -400,10 +405,10 @@
 #topic > h1{
   margin:0;
   padding:0;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 #topic > h2{
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 90%;
   overflow-wrap: break-word;
   text-align: center;
@@ -451,6 +456,27 @@
     z-index: -1;
   }
 
+  footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: rgba(20,0, 0, 0.5);
+    padding: 10px;
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 0;
+    align-items: center;
+    visibility: collapse;
+  }
+  footer a i{
+    color: white;
+    font-size: 2rem;
+    padding: 10vw;
+  }
+  footer>a> i:hover {
+    color: #a28834; 
+  }
+
   @media (max-width: 620px) {
     body{
       width: 100vw;
@@ -486,6 +512,7 @@
       min-width: 90vw;
       height: 30vh;
       margin: 5px;
+      font-size:1em;
     }
 
     .horizontal{
@@ -505,13 +532,21 @@
       margin-bottom: 6vh;
     }
     #topic h1{
-      font-size: 4rem;
+      font-size: 3rem;
+      text-align: center;
     }
     #topic h2{
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
     #hello{
-      font-size: 2rem;
+      font-size: 1.5rem;
+      text-align: left;
+    }
+    #description{
+      width: 80vw;
+    }
+    #description > p {
+      font-size: 1.1rem;
     }
     .article{
       flex-direction: column;
@@ -519,9 +554,13 @@
       padding-bottom: 10px;
     }
     .article img{
-      width: 60%;
+      width: 50vw;
+      height: 50vw;
     }
     .article-title{
       width: 90%;
+    }
+    footer{
+      visibility: visible;
     }
   }
