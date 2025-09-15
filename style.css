@@ -76,6 +76,19 @@
     margin: 0;  
     text-align: right; 
   }
+  #scroll {
+    font-size: 2rem;    
+    padding: 0;
+    margin: 0;    
+    padding-top: 10vh;  
+    text-align: center; 
+  }
+  #scrollicon {
+    font-size: 7rem;   
+    padding: 0;
+    margin: 0;    
+    text-align: center; 
+  }
 
   #description{
     display: flex;
@@ -272,8 +285,7 @@
   #journals{
     height: auto;
     width: 100vw;
-    background:
-    linear-gradient(rgba(20,0, 0, 0.5),rgba(20,0, 0, 0.5)), url(pictures/IMG_5688.jpg);
+    background-color:#E7F59E40;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -286,8 +298,7 @@
 #creatives{
   height: auto;
   width: 100vw;
-  background:
-  linear-gradient(rgba(20,0, 0, 0.1),rgba(20,0, 0, 0.1)), url(pictures/IMG_5394.jpeg);
+  background-color:#E7F59E40;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment:fixed;
@@ -301,8 +312,7 @@
 #articles{
     height: auto;
     width: 100vw;
-    background:
-    linear-gradient(rgba(20,0, 0, 0.1),rgba(20,0, 0, 0.1)), url(pictures/IMG_5593.jpeg);
+    background-color:#E7F59E40;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment:fixed;
