@@ -37,23 +37,45 @@
   /* Container to position text absolutely on top */
   #first-section{
     display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+  }
+  #scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 15%;
+    margin-top: 2%;
+    color:white;
+    width: 100vw;
+  }
+  #intro-wrapper {
+    display: flex;
     flex-direction: row;
-    margin-bottom: 20vh;
+    height: 90%;
+    overflow-y: hidden;
   }
-  #first-section > img{
-    width: 42%;
-    align-self: flex-end;
+  .img-border {
+    display: flex;
+    border-radius: 50%;
+    padding: 10px; /* thickness of border */
+    background: linear-gradient(to right, #a28834, #d7cba3);
+    justify-content: center;
+    align-self: center;
   }
-  #first-section > div{
+  
+  #profile{
+    width: 30vw;
+    align-self: center;
+    border-radius: 50%;
+  }
+  #intro{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 58%;
+    width: 57%;
     color: white;
-    padding-left: 10%;
-  }
-  #profile{
-    filter: drop-shadow(-100px -10px 150px rgba(0,0,0,1));
+    padding-left: 7%;
   }
   #name{
     display: flex;
@@ -61,15 +83,15 @@
     flex-direction: row;
     align-items: first baseline;
     justify-content: center;
-    width: 58%;
+    width: 57%;
     color: white;
-    padding-left: 10%;
+    padding-left: 7%;
   }
   h1 {
     font-size: 9rem;      
     margin: 0;  
     text-align: right; 
-    margin-right: 10%;  
+    padding-right: 7%;  
   }
   h2 {
     font-size: 7rem;      
@@ -77,14 +99,13 @@
     text-align: right; 
   }
   #scroll {
-    font-size: 2rem;    
+    font-size: 1rem;    
     padding: 0;
-    margin: 0;    
-    padding-top: 10vh;  
+    margin: 0;     
     text-align: center; 
   }
   #scrollicon {
-    font-size: 7rem;   
+    font-size: 3rem;   
     padding: 0;
     margin: 0;    
     text-align: center; 
@@ -92,13 +113,15 @@
 
   #description{
     display: flex;
-    width: 60vw;
+    width: 70vw;
     padding-left: 2%;
     padding-right: 2%;
     background-color: #E7F59E40;
-    align-self:last baseline;
-    margin-bottom: 5%;
+    align-self:center;
+    justify-self: last baseline;
+    margin-bottom: 1%;
     color: white;
+    align-items: center;
   }
   
   .scrolly-container {
@@ -182,7 +205,14 @@
     padding: 25vh;
     padding-left: 0;
   }
-
+  #second-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 2%;
+    height: 100vh;
+    width: 100vw;
+  }
 
    
 /* Header  */
@@ -488,6 +518,7 @@
 
   @media (max-width: 620px) {
     body{
+      background-image: url(pictures/img_back2.jpg);
       width: 100vw;
     }
     #hello{
@@ -498,18 +529,55 @@
       font-size: 4rem; 
     }
     h2{
-      font-size: 5rem; 
+      font-size: 4rem; 
     }
     #first-section{
       display: flex;
       flex-direction: column;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      justify-content: center;
+      align-items: center;
     }
-    #first-section > img{
-      align-self: flex-start;
-      width: 60vw;
+    #name{
+      width: 90vw;
+      overflow-y: hidden;
+      overflow-x: hidden;
     }
-    #description{
-      font-size: 1.4rem;
+    #intro{
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #intro-wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      width: 90vw;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    #profile{
+      visibility: hidden;
+    }
+    .img-border{
+      visibility: hidden;
+    }
+    #scroll-wrapper{
+      height: 15%;
+      align-self: last baseline;
     }
     .sticky{
       flex-direction:column;
@@ -553,9 +621,12 @@
     }
     #description{
       width: 80vw;
+      height: 80%;
+      align-self: center;
     }
     #description > p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      text-align: left;
     }
     .article{
       flex-direction: column;
